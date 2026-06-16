@@ -1,4 +1,4 @@
-#  DecodeLabs Expense Tracker
+no#  DecodeLabs Expense Tracker
 
 > A terminal-based personal expense management application built with Python — Task 2
 
@@ -158,6 +158,6 @@ Manages the full list of expense records.
 
 ---
 
-## 📄 License
+##  License
 
 This project is open-source and free to use for educational purposes.
