@@ -48,10 +48,8 @@ The **DecodeLabs Expense Tracker** is a terminal-based Python application design
 ## 📂 Project Structure
 
 ```
-DecodeLabs-Expense-Tracker/
-│
-├── expense_tracker.py
-└── README.md
+ExpenseTacker_Decodeabs.py
+
 ```
 
 ---
@@ -67,12 +65,12 @@ git clone <repository-url>
 
 ### 2️⃣ Navigate to project folder
 ```bash
-cd DecodeLabs-Expense-Tracker
+cd ExpenseTacker_Decodeabs.py
 ```
 
 ### 3️⃣ Run the program
 ```bash
-python expense_tracker.py
+python ExpenseTacker_Decodeabs.py
 ```
 
 ---
