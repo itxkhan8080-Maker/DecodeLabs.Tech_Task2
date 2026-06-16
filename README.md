@@ -1,75 +1,101 @@
-no#  DecodeLabs Expense Tracker
-
-> A terminal-based personal expense management application built with Python — Task 2
+# 💰 DecodeLabs Expense Tracker Project 2
 
 ---
 
-## Overview
+## 📌 Overview
 
-The **DecodeLabs Expense Tracker** is a command-line application designed to help users record and manage their daily expenses. It allows you to add expenses with category and amount details, view the full expense list, search for a specific expense by name, and delete entries — all through a clean interactive menu.
-
----
-
-##  Features
-
--  **Add Expense** — Log an expense with its name, category, amount, and date
--  **View Expenses** — Display all recorded expenses with numbered IDs
--  **Search Expense** — Find a specific expense by name instantly
--  **Delete Expense** — Remove an expense entry by name
--  **Interactive Menu Loop** — Keeps running until the user chooses to exit
+The **DecodeLabs Expense Tracker** is a terminal-based Python application designed to help users manage and track their daily expenses efficiently. It allows users to add, view, delete, and search expenses using a simple command-line interface.
 
 ---
 
-## Tech Stack
+## 🎯 Objectives
 
-| Technology | Details         |
-|------------|-----------------|
-| Language   | Python 3.13.5    |
-| Paradigm   | Object-Oriented Programming |
-| Interface  | Command-Line Interface   |
-| Libraries  | (Built-In) |
+- Learn Object-Oriented Programming (OOP) in Python 🐍  
+- Practice real-world CRUD operations (Create, Read, Update, Delete)  
+- Understand class-based program structure  
+- Improve logic building and problem-solving skills  
+- Build a CLI-based financial tracker system  
 
 ---
 
-##  Project Structure
+## 🚀 Features
+
+- ➕ Add new expenses with name, category, amount, and date  
+- 📋 View all recorded expenses  
+- 🔍 Search expense by name  
+- 🗑️ Delete expense by name  
+- 💻 Simple and interactive command-line menu  
+- 📊 Organized expense tracking system  
+
+---
+
+## 🛠️ Technologies Used
+
+### 🐍 Programming Language
+- Python
+
+### 📚 Concepts Used
+- Object-Oriented Programming (OOP)
+- Classes and Objects
+- Lists
+- Loops
+- Conditional Statements
+- Functions & Methods
+- Command Line Interface (CLI)
+
+---
+
+## 📂 Project Structure
 
 ```
 DecodeLabs-Expense-Tracker/
 │
-├── expense_tracker.py    # Main application file
-└── README.md             # Project documentation
+├── expense_tracker.py
+└── README.md
 ```
 
 ---
 
-##  How to Run
+## ⚙️ Installation
 
-### Prerequisites
+Follow these steps to run the project locally:
 
-- Python 3.13.5 installed on your system
-
-### Steps
-
+### 1️⃣ Clone the repository
 ```bash
-# 1. Clone or download the project
-git clone https://github.com/your-username/decodelabs-expense-tracker.git
+git clone <repository-url>
+```
 
-# 2. Navigate into the project folder
-cd decodelabs-expense-tracker
+### 2️⃣ Navigate to project folder
+```bash
+cd DecodeLabs-Expense-Tracker
+```
 
-# 3. Run the application
+### 3️⃣ Run the program
+```bash
 python expense_tracker.py
 ```
 
 ---
 
-##  Usage
+## 💻 Usage
 
-Once the program runs, you'll see the following menu:
+1. Run the program in terminal
+2. Choose an option from the menu:
+   - Add Expense
+   - View Expenses
+   - Delete Expense
+   - Search Expense
+   - Exit
+3. Enter required details when prompted
+4. Manage your expenses easily
+
+---
+
+## 🖥️ Program Menu Example
 
 ```
 ======================================
-            Expense Tracker
+            Expense Tracker           
 ======================================
 1. Add Expense
 2. View Expense
@@ -78,86 +104,48 @@ Once the program runs, you'll see the following menu:
 5. Exit
 ```
 
-### Example Workflow
+---
 
-**Adding an Expense:**
-```
-Enter Choice: 1
-Enter Expense Name: Grocery
-Enter Expense Category: Food
-Enter Amount: 1500
-Enter Date (DD/MM/YYYY): 15/06/2025
-Expense Added Successfully!
-```
+## 📋 Example Output
 
-**Viewing Expenses:**
 ```
 ----------- Expense List ----------
 Expense ID: 1
-Expense Name: Grocery
+Expense Name: Lunch
 Category: Food
-Amount: 1500.0
-Date: 15/06/2025
+Amount: 500
+Date: 17/06/2026
 ------------------------------------
 ```
 
-**Searching an Expense:**
-```
-Enter Choice: 4
-Enter Expense Name: Grocery
------------ Search Expense ----------
-Expense Name: Grocery
-Category: Food
-Amount: 1500.0
-Date: 15/06/2025
--------------------------------------
-```
+---
 
-**Deleting an Expense:**
-```
-Enter Choice: 3
-Enter Expense Name: Grocery
-Expense Deleted Successfully!
-```
+## 📈 Future Improvements
+
+- 💾 Add file/database storage for permanent saving
+- 📊 Add expense summary and analytics
+- 📅 Add monthly/weekly filtering
+- 💸 Add budget limit alerts
+- 📱 Convert into GUI or web application
 
 ---
 
-## Class Design
+## 👨‍💻 Author
 
-### `Expense`
-Represents a single expense record.
-
-| Attribute      | Type    | Description                            |
-|----------------|---------|----------------------------------------|
-| `Expensename`  | `str`   | Name of the expense                    |
-| `catory`       | `str`   | Category the expense belongs to        |
-| `amount`       | `float` | Cost of the expense                    |
-| `date`         | `str`   | Date of the expense (DD/MM/YYYY)       |
+- **Name:** Hamza Khan Sherwani
+- **Project:** DecodeLabs Expense Tracker Project 2
+- **Language:** Python 🐍
 
 ---
 
-### `ExpenseTracker`
-Manages the full list of expense records.
+## 📞 Contact
 
-| Method            | Description                                      |
-|-------------------|--------------------------------------------------|
-| `addExpense()`    | Takes input and adds a new `Expense` to the list |
-| `viewExpense()`   | Prints all expenses with numbered IDs            |
-| `deleteExpense()` | Finds and removes an expense by name             |
-| `searchExpense()` | Finds and displays a specific expense by name    |
+- 📧 **Email:** itxkhan8080@gmail.com
+- 🔗 **LinkedIn:**  https://www.linkedin.com/in/hamza-khan-sherwani-97803b40b/
+- 💻 **GitHub:**  https://github.com/itxkhan8080-Maker
 
 ---
 
+## 📄 License
 
-
-## Author
-
-**DecodeLabs — Task 2**
-
-> Built as part of the DecodeLabs Python learning series.
-
----
-
-##  License
-
-This project is open-source and free to use for educational purposes.
+This project is made for learning and educational purpose © 2026 Hamza Khan Sherwani.
