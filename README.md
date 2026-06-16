@@ -1,150 +1,163 @@
-#  DecodeLabs To-Do List App ( Task 1 )
+#  DecodeLabs Expense Tracker
 
-> A terminal-based student task management application built with Python — Project 1
+> A terminal-based personal expense management application built with Python — Task 2
 
----------------------------------------------------------------------------------
+---
 
-##  Overview
+## Overview
 
-The **DecodeLabs To-Do List App** is a command-line application designed to help manage and track student tasks. It allows users to add tasks with student details, view all tasks with their current status, mark tasks as completed, and delete tasks — all through a simple interactive menu.
+The **DecodeLabs Expense Tracker** is a command-line application designed to help users record and manage their daily expenses. It allows you to add expenses with category and amount details, view the full expense list, search for a specific expense by name, and delete entries — all through a clean interactive menu.
 
----------------------------------------------------------------------------------
+---
 
 ##  Features
 
-- **Add Tasks** — Register student name, roll number, task name, and due date
-- **View Tasks** — Display all tasks with their completion status
--  **Mark as Completed** — Update the status of any task to "Completed"
--  **Delete Tasks** — Remove tasks by their index number
--  **Interactive Menu Loop** — Continuous prompts until the user chooses to exit
+-  **Add Expense** — Log an expense with its name, category, amount, and date
+-  **View Expenses** — Display all recorded expenses with numbered IDs
+-  **Search Expense** — Find a specific expense by name instantly
+-  **Delete Expense** — Remove an expense entry by name
+-  **Interactive Menu Loop** — Keeps running until the user chooses to exit
 
------------------------------------------------------------------------------------------
+---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Technology | Details         |
 |------------|-----------------|
-| Language   | Python 3.x      |
-| Paradigm   | Object-Oriented |
-| Interface  | Command-Line    |
-| Libraries  | None (built-in) |
+| Language   | Python 3.13.5    |
+| Paradigm   | Object-Oriented Programming |
+| Interface  | Command-Line Interface   |
+| Libraries  | (Built-In) |
 
------------------------------------------------------------------------------------------
+---
 
-## Project Structure
+##  Project Structure
 
-DecodeLabs-ToDo-App/
+```
+DecodeLabs-Expense-Tracker/
 │
-├── todo_app.py       # Main application file
-└── README.md         # Project documentation
+├── expense_tracker.py    # Main application file
+└── README.md             # Project documentation
+```
 
------------------------------------------------------------------------------------------
+---
 
 ##  How to Run
 
 ### Prerequisites
 
-- Python  3.13.5 installed on my system
+- Python 3.13.5 installed on your system
 
 ### Steps
 
+```bash
 # 1. Clone or download the project
-
+git clone https://github.com/your-username/decodelabs-expense-tracker.git
 
 # 2. Navigate into the project folder
-cd To-do List_DecodeLabs.py
+cd decodelabs-expense-tracker
 
 # 3. Run the application
-python To-Do List_DecodeLabs.py
+python expense_tracker.py
+```
 
------------------------------------------------------------------------------------------
+---
 
 ##  Usage
 
 Once the program runs, you'll see the following menu:
 
-===================================
-               MENU
-===================================
-1. Add Task
-2. View Tasks
-3. Complete Task
-4. Delete Task
+```
+======================================
+            Expense Tracker
+======================================
+1. Add Expense
+2. View Expense
+3. Delete Expense
+4. Search Expense
 5. Exit
+```
 
 ### Example Workflow
 
-**Adding a Task:**
+**Adding an Expense:**
+```
+Enter Choice: 1
+Enter Expense Name: Grocery
+Enter Expense Category: Food
+Enter Amount: 1500
+Enter Date (DD/MM/YYYY): 15/06/2025
+Expense Added Successfully!
+```
 
-Enter choice: 1
-Enter Student Name: Ali Hassan
-Enter Roll Number: 221
-Enter Task Name: Submit Lab Report
-Enter Date (DD-MM-YYYY): 20-06-2025
-Task Added Successfully!
+**Viewing Expenses:**
+```
+----------- Expense List ----------
+Expense ID: 1
+Expense Name: Grocery
+Category: Food
+Amount: 1500.0
+Date: 15/06/2025
+------------------------------------
+```
 
-**Viewing Tasks:**
+**Searching an Expense:**
+```
+Enter Choice: 4
+Enter Expense Name: Grocery
+----------- Search Expense ----------
+Expense Name: Grocery
+Category: Food
+Amount: 1500.0
+Date: 15/06/2025
+-------------------------------------
+```
 
-Task Number: 0
-Student Name: Ali Hassan
-Student Roll Number: 221
-Task: Submit Lab Report
-Task Date: 20-06-2025
-Status: Not Completed
+**Deleting an Expense:**
+```
+Enter Choice: 3
+Enter Expense Name: Grocery
+Expense Deleted Successfully!
+```
 
-**Marking as Completed:**
-
-Enter choice: 3
-Enter Task Number: 0
-Task Completed!
-
-**Deleting a Task:**
-
-Enter choice: 4
-Enter Task Number: 0
-Task Deleted Successfully!
-
------------------------------------------------------------------------------------------
+---
 
 ## Class Design
 
-### `Task`
-Represents an individual student task.
+### `Expense`
+Represents a single expense record.
 
-| Attribute       | Type    | Description                          |
-|----------------|---------|--------------------------------------|
-| `Studentname`  | `str`   | Name of the student                  |
-| `Rollnum`      | `str`   | Student's roll number                |
-| `Taskname`     | `str`   | Name/description of the task         |
-| `date`         | `str`   | Due date in DD-MM-YYYY format        |
-| `completed`    | `bool`  | Task completion status (default: False) |
+| Attribute      | Type    | Description                            |
+|----------------|---------|----------------------------------------|
+| `Expensename`  | `str`   | Name of the expense                    |
+| `catory`       | `str`   | Category the expense belongs to        |
+| `amount`       | `float` | Cost of the expense                    |
+| `date`         | `str`   | Date of the expense (DD/MM/YYYY)       |
 
-| Method                  | Description                        |
-|-------------------------|------------------------------------|
-| `Show_completed_task()` | Marks the task as completed        |
+---
 
------------------------------------------------------------------------------------------
+### `ExpenseTracker`
+Manages the full list of expense records.
 
-### `ToDoListApp`
-Manages the collection of tasks.
+| Method            | Description                                      |
+|-------------------|--------------------------------------------------|
+| `addExpense()`    | Takes input and adds a new `Expense` to the list |
+| `viewExpense()`   | Prints all expenses with numbered IDs            |
+| `deleteExpense()` | Finds and removes an expense by name             |
+| `searchExpense()` | Finds and displays a specific expense by name    |
 
-| Method                                          | Description                              |
-|-------------------------------------------------|------------------------------------------|
-| `add_details(name, rollno, taskname, date)`     | Creates and adds a new Task object       |
-| `view_details()`                                | Prints all tasks with their status       |
-| `completed_task(index)`                         | Marks the task at the given index as done |
-| `deleted_task(index)`                           | Removes the task at the given index      |
+---
 
------------------------------------------------------------------------------------------
+
 
 ## Author
 
-**DecodeLabs — Task 1**
+**DecodeLabs — Task 2**
 
 > Built as part of the DecodeLabs Python learning series.
 
------------------------------------------------------------------------------------------
+---
 
-## License
+## 📄 License
 
 This project is open-source and free to use for educational purposes.
