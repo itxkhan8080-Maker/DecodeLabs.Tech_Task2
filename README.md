@@ -119,6 +119,16 @@ Date: 17/06/2026
 ```
 
 ---
+## 📸 Screenshots
+
+### Program Menu
+![Expense Tracker Menu](screenshots/menu.png)
+
+### Add Expense
+![Add Expense](screenshots/add.png)
+
+
+---
 
 ## 📈 Future Improvements
 
