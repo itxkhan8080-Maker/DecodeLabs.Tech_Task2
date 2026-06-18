@@ -1,5 +1,5 @@
 #======================================================================
-#                     Expense Tracker Project 2
+#                   DecodeLabs Expense Tracker Project 2
 #======================================================================
 
 class Expense:
@@ -15,7 +15,10 @@ class Expense:
 class ExpenseTracker:
 
     def __init__(self):
-        self.expense = []
+        self.expense = []  # Empty List
+        
+        
+        #                          ---:( Add Expense ):---
 
     def addExpense(self):
 
@@ -29,6 +32,8 @@ class ExpenseTracker:
         self.expense.append(expense)
 
         print("Expense Added Successfully!")
+        
+         #                          ---:( View Expense ):---
 
     def viewExpense(self):
 
@@ -46,6 +51,9 @@ class ExpenseTracker:
             print("Amount:",expense.amount)
             print("Date:",expense.date)
             print("------------------------------------")
+            
+            
+             #                          ---:( Delete Expense ):---
     
 
     def deleteExpense(self):
@@ -59,6 +67,9 @@ class ExpenseTracker:
                 return
 
         print("Expense Not Found!")
+        
+        
+         #                          ---:( Search Expense ):---
 
     def searchExpense(self):
 
@@ -76,6 +87,27 @@ class ExpenseTracker:
                 return
 
         print("Expense Not Found!")
+        
+        
+         #                          ---:( File Handling ):---
+         
+         
+    def saveExpense(self):
+
+        file = open("expense.txt", "w")
+
+        for expense in self.expense:
+
+            file.write("Expense Name:\n" + expense.Expensename)
+            file.write("Category:\n" + expense.catory)
+            file.write("Amount:\n" + str(expense.amount))
+            file.write("Date:\n" + expense.date)
+            file.write("----------------------\n")
+
+        file.close()    
+         
+         
+         #                          ---:( Main Program ):---
 
 
 tracker = ExpenseTracker()
