@@ -23,7 +23,8 @@ The **DecodeLabs Expense Tracker** is a terminal-based Python application design
 - ➕ Add new expenses with name, category, amount, and date  
 - 📋 View all recorded expenses  
 - 🔍 Search expense by name  
-- 🗑️ Delete expense by name  
+- 🗑️ Delete expense by name
+- use File Handling for data storing
 - 💻 Simple and interactive command-line menu  
 - 📊 Organized expense tracking system  
 
@@ -41,6 +42,7 @@ The **DecodeLabs Expense Tracker** is a terminal-based Python application design
 - Loops
 - Conditional Statements
 - Functions & Methods
+- File Handling
 - Command Line Interface (CLI)
 
 ---
